@@ -1,4 +1,4 @@
-import CreditCardWidget from "./CreditCard";
+import CreditCardWidget from "./CreditCardWidget";
 
 const body = document.querySelector("body");
 const creditCardWidget = new CreditCardWidget(body);
