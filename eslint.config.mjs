@@ -18,7 +18,7 @@ export default [
     ignores: ["dist/*"],
   },
   {
-    files: ["**/*.test.js"],
+    files: ["**/*.test.js", "setup.js"],
     ...jest.configs["flat/recommended"],
     rules: {
       ...jest.configs["flat/recommended"].rules,
