@@ -33,7 +33,7 @@ describe("Credit Card Validator form", () => {
     server.kill();
   });
 
-  test("should add do something", async () => {
+  test("should valid card", async () => {
     await page.goto(baseUrl);
     const form = await page.$(".validate");
     const input = await form.$(".validate__input");
@@ -41,5 +41,15 @@ describe("Credit Card Validator form", () => {
     const submit = await form.$(".validate__button");
     submit.click();
     await page.waitForSelector(".visa.cdisabled");
+  });
+
+  test("should invalid card", async () => {
+    await page.goto(baseUrl);
+    const form = await page.$(".validate");
+    const input = await form.$(".validate__input");
+    await input.type("55555555555544444");
+    const submit = await form.$(".validate__button");
+    submit.click();
+    await page.waitForSelector(".card.visa");
   });
 });

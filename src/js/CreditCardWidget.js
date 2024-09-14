@@ -42,9 +42,15 @@ export default class CreditCardWidget {
   onSubmit(event) {
     event.preventDefault();
     const inputEl = this.parentEl.querySelector(this.constructor.inputSelector);
+    const allCards = Array.from(document.querySelectorAll(".card"));
     if (validateCard(inputEl.value)) {
       this.showCurrentCard(inputEl);
     } else {
+      allCards.forEach((item) => {
+        if (item.classList.contains("cdisabled")) {
+          item.classList.remove("cdisabled");
+        }
+      });
       inputEl.value = "Uncorrect card";
       inputEl.setAttribute("disabled", "");
       setTimeout(() => {
