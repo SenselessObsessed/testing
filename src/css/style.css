@@ -1,0 +1,85 @@
+.validate__input {
+  outline-color: rgb(128, 222, 253);
+  box-sizing: border-box;
+  height: 34px;
+  width: 177px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.validate__button {
+  box-sizing: border-box;
+  margin-left: 10px;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.card {
+  width: 39px;
+  height: 25px;
+  margin-right: 4px;
+}
+
+.card.visa {
+  background-image: url(../img/card-visa.gif);
+}
+
+.card.mastercard {
+  background-image: url(../img/card-mastercard.gif);
+}
+
+.card.amex {
+  background-image: url(../img/card-amex.gif);
+}
+
+.card.discover {
+  background-image: url(../img/card-discover.gif);
+}
+
+.card.jcb {
+  background-image: url(../img/card-jcb.gif);
+}
+
+.card.diners {
+  background-image: url(../img/card-diners.gif);
+}
+
+.cards {
+  display: flex;
+  justify-content: left;
+  margin: 10px 0;
+  height: 25px;
+}
+
+.list-unstyled {
+  padding: 0;
+  list-style: none;
+}
+
+.cdisabled {
+  background-position: 0 -25px;
+  opacity: 0.3;
+}
